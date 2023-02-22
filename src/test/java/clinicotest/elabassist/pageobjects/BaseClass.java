@@ -43,6 +43,7 @@ public class BaseClass {
 	public void setup() {
 		driver=BrowserFactory.startBrowser(driver, config.getBrowser(), config.GetAppUrl());
 
+		
 	}
 	@AfterClass
 	public void tearDown() {

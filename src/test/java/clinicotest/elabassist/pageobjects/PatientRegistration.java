@@ -11,7 +11,6 @@ public class PatientRegistration {
 	public PatientRegistration(WebDriver ldriver) {
 		this.driver=ldriver;
 		
-		
 	}
 	
 	@FindBy(xpath="//*[@id='form1']//div[3]//header//a[@href='#']")

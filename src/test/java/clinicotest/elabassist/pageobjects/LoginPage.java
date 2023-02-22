@@ -8,9 +8,7 @@ public class LoginPage {
 	WebDriver driver;
 
 	public LoginPage(WebDriver ldriver) {
-		this.driver = ldriver;
-		
-		
+		this.driver = ldriver;	
 	}
 
 	@FindBy(xpath = "//input[@id='txtUserName']")
