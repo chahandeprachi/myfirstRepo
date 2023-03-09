@@ -3,6 +3,7 @@ package clinicotest.elabassist.pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class PatientRegistration {
@@ -10,7 +11,7 @@ public class PatientRegistration {
 	
 	public PatientRegistration(WebDriver ldriver) {
 		this.driver=ldriver;
-		
+		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(xpath="//*[@id='form1']//div[3]//header//a[@href='#']")

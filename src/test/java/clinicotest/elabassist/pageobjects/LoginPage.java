@@ -2,6 +2,7 @@ package clinicotest.elabassist.pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
@@ -9,6 +10,7 @@ public class LoginPage {
 
 	public LoginPage(WebDriver ldriver) {
 		this.driver = ldriver;	
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(xpath = "//input[@id='txtUserName']")

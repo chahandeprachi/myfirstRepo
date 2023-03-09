@@ -9,12 +9,13 @@ import clinicotest.elabassist.pageobjects.PatientRegistration;
 public class TC_PateintRegistration_002 extends BaseClass {
 	@Test
 	public void testPateintRegistration() {
-		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginToApplication(excel.getStringData("data", 0, 0), excel.getStringData("data", 0, 1));
-
+		
 		logger=report.createTest("patient registration");
-		PatientRegistration patientRegistration= PageFactory.initElements(driver, PatientRegistration.class);
+		PatientRegistration patientRegistration= new PatientRegistration(driver);
 		logger.info("start pateint registration test");
+		//loginPage.loginToApplication(excel.getStringData("data", 0, 0), excel.getStringData("data", 0, 1));
 		patientRegistration.registerPatient();
 		logger.pass("passed test");
 	}

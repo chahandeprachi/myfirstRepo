@@ -12,7 +12,7 @@ public class TC_LoginTest_001 extends BaseClass{
 	@Test
 	public void testLogin() {
 		logger=report.createTest("Login to clinico");
-		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		LoginPage loginPage = new LoginPage(driver);
 		logger.info("Starting application");
 		loginPage.loginToApplication(excel.getStringData("data", 0, 0), excel.getStringData("data", 0, 1));
 		logger.pass("Test passed");
